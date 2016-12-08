@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+    padding: opx;
+}
+
+#one {
+    background-color: orangered;
+    grid-area: one;
+}
+#two {
+    background-color: dimgray;
+    grid-area: two;
+}
+#three {
+    background-color: magenta;
+    grid-area: three;
+}
+#four {
+    background-color: chocolate;
+    grid-area: four;
+}
+#five {
+    background-color: dodgerblue;
+    grid-area: five;
+}
+#zero {
+    background-color: forestgreen;
+    grid-area: zero;
+}
+#main_parts {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 50px);
+    grid-gap: 10px;
+    grid-template-areas: "one one two three" "four four two three" "four four two zero" "four four five five"
+}
+
+@media all and (max-width: 640px) {
+    #main_parts {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 50px);
+        grid-template-areas: "one one one one" "two two two two" "three three three three" "four four four four" "zero zero zero zero" "five five five five"
+    }
+
+}
